@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings" // 1. Added for string manipulation
 )
 
 func check(e error) {
@@ -22,19 +23,30 @@ func main() {
 	check(err)
 	defer file2.Close()
 
-	// 1. Wrap the output file in a buffered writer for efficiency
 	writer := bufio.NewWriter(file2)
-
 	file3 := bufio.NewScanner(file1)
+
 	for file3.Scan() {
 		line := file3.Text()
-		
-		// 2. We write to the buffer ('writer') instead of the raw file
-		fmt.Fprintln(writer, line)
+
+		// 2. Split the line into individual words
+		words := strings.Fields(line)
+
+		var modifiedWords []string
+		for _, word := range words {
+			// 3. Perform your manipulations here
+			// Examples:
+			upperWord := strings.ToUpper(word)
+			// binWord := fmt.Sprintf("%b", someInteger) // If converting numbers
+
+			modifiedWords = append(modifiedWords, upperWord)
+		}
+
+		// 4. Join words back with a space and write the line
+		// Use Fprintln to keep the original line-by-line format
+		fmt.Fprintln(writer, strings.Join(modifiedWords, " "))
 	}
 
-	// 3. IMPORTANT: You MUST flush the buffer to ensure the last 
-	// bits of data are actually written to the disk before the program ends.
 	err = writer.Flush()
 	check(err)
 

@@ -1,5 +1,5 @@
-In this project you will use some of your old functions made in your old repository. You will use them with the objective of making a simple text completion/editing/auto-correction tool.
+IN THIS PROJECT YOU WILL USE SOME OF YOUR OLD FUNCTIONS MADE IN YOUR OLD REPOSITORY. YOU WILL USE THEM WITH THE OBJECTIVE OF MAKING A SIMPLE TEXT COMPLETION/EDITING/AUTO-CORRECTION TOOL.
 
-One more detail. This time the project will be corrected by auditors. The auditors will be other students and you will be an auditor as well.
+ONE MORE DETAIL. THIS TIME THE PROJECT WILL BE CORRECTED BY AUDITORS. THE AUDITORS WILL BE OTHER STUDENTS AND YOU WILL BE AN AUDITOR AS WELL.
 
-We advise you to create your own tests for yourself and for when you will correct your auditees.
+WE ADVISE YOU TO CREATE YOUR OWN TESTS FOR YOURSELF AND FOR WHEN YOU WILL CORRECT YOUR AUDITEES.
